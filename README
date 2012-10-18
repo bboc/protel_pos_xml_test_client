@@ -4,3 +4,18 @@ A small python implementation to create test requests against a protel server.
 
 Requests and responses are either printed on screen or saved to file as 
 a pair of request and response files.
+
+## Usage
+
+usage: demo_requests.py [-h] [-t {file,stdout}] host port
+
+Send requests to protel test server and print or save responses
+
+positional arguments:
+  host                  server host
+  port                  server port
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -t {file,stdout}, --target {file,stdout}
+                        what to do with the output (file|stdout)
