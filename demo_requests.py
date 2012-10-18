@@ -15,10 +15,10 @@ def to_stdout(title, request, response):
 
 def to_file(title, request, response):
 
+	print "writing files for {}".format(title)
 	def write(title, kind, data):
 		with file('examples/{}-{}'.format(title, kind), 'w+') as f:
 			f.write(data)
-
 	write(title, 'request', request)
 	write(title, 'response', response)	
 
@@ -26,13 +26,8 @@ FILE = to_file
 STDOUT = to_stdout
 
 def demo_request(title, method, body, headers=None, target=STDOUT):
-
 	request, response = protel_request(method, HOST, PORT, body)	
-	print str(target)
 	target(title, request, response)
-
-		
-
 
 def demo_requests(target):
 
@@ -54,5 +49,5 @@ def demo_requests(target):
 
 if __name__ == "__main__":		
 
-	demo_requests(STDOUT)
+	demo_requests(FILE)
 

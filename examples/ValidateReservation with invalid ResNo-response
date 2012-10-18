@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Success: 1022
+Transaction: 105754499
+Outlet: 1
+Reservation: 5
+Content-length: 99
+
+<Body><Errortext>Invalid(ated) reservation number ('5') provided in subtag ResNo</Errortext></Body>

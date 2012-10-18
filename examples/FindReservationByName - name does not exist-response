@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Success: 1025
+Transaction: 105900477
+Outlet: 1
+Content-length: 57
+
+<Body><Errortext>No reservations found</Errortext></Body>

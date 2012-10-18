@@ -1,0 +1,6 @@
+POST ValidateReservation HTTP/1.1
+Transaction: 105754499
+Outlet: 1
+Content-length: 29
+
+<Body><ResNo>5</ResNo></Body>
