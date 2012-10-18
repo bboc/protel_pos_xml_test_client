@@ -1,0 +1,29 @@
+POST ValidateReservation HTTP/1.1
+
+POST ValidateReservation HTTP/1.1
+Outlet: 0
+Transaction: foobar6
+Content-length: 16
+
+<Body><ResNo>5</ResNo></Body>
+
+
+
+
+
+
+
+
+HTTP/1.1 200 OK
+Success: 1001
+Transaction: 0
+Outlet: 1
+Content-length: 69
+
+<Body><Errortext>Unknown command verb 'eservation'</Errortext></Body>HTTP/1.1 200 OK
+Success: 1001
+Transaction: 0
+Outlet: 1
+Content-length: 69
+
+<Body><Errortext>Unknown command verb 'eservation'</Errortext></Body>

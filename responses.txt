@@ -1,0 +1,56 @@
+########################################
+ValidateReservation: invalid Reservation
+########################################
+------------ Request ------------
+POST ValidateReservation HTTP/1.1
+Transaction: 163282762
+Outlet: 1
+Content-length: 29
+
+<Body><ResNo>5</ResNo></Body>
+------------ Response------------
+HTTP/1.1 200 OK
+Success: 1022
+Transaction: 163282762
+Outlet: 1
+Reservation: 5
+Content-length: 99
+
+<Body><Errortext>Invalid(ated) reservation number ('5') provided in subtag ResNo</Errortext></Body>
+#####################
+FindReservationByName
+#####################
+------------ Request ------------
+POST FindReservationByName HTTP/1.1
+Transaction: 163532054
+Outlet: 1
+Content-length: 35
+
+<Body><Search>Meier</Search></Body>
+------------ Response------------
+HTTP/1.1 200 OK
+Success: 1025
+Transaction: 163532054
+Outlet: 1
+Content-length: 57
+
+<Body><Errortext>No reservations found</Errortext></Body>
+#####################
+FindReservationByRoom
+#####################
+------------ Request ------------
+POST FindReservationByRoom HTTP/1.1
+Transaction: 163807196
+Outlet: 1
+Content-length: 27
+
+<Body><Room>5</Room></Body>
+------------ Response------------
+HTTP/1.1 200 OK
+Success: 1025
+Transaction: 163807196
+Outlet: 1
+Content-length: 57
+
+<Body><Errortext>No reservations found</Errortext></Body>
+[Finished in 1.1s]
