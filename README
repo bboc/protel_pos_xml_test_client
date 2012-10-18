@@ -1,0 +1,6 @@
+# Test Client for Protel POS XML
+
+A small python implementation to create test requests against a protel server.
+
+Requests and responses are either printed on screen or saved to file as 
+a pair of request and response files.
