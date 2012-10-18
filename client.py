@@ -67,4 +67,3 @@ def protel_request(method, host, port, body='', headers=None, outlet='1',transac
 
 	r = ProtelClient(method, headers, body, host, port)
 	return r.request, r.send()
-

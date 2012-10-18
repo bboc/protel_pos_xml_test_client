@@ -1,8 +1,17 @@
-from client import protel_request
+import argparse
 from functools import partial
 
-HOST = '217.6.121.163'
-PORT = 5015              # The same port as used by the server
+from client import protel_request
+
+
+def parse_args():
+	parser = argparse.ArgumentParser(description='Send requests to protel test server and print or save responses')
+	parser.add_argument('-t', '--target', choices=['file', 'stdout'], default='stdout',
+						help='what to do with the output (file|stdout)')
+	parser.add_argument('host', help='server host')
+	parser.add_argument('port', help='server port')
+
+	return parser.parse_args()
 
 
 def to_stdout(title, request, response):
@@ -11,7 +20,6 @@ def to_stdout(title, request, response):
 	print "#"*len(title)
 	print '------------ Request ------------\n', str(request)
 	print '------------ Response------------\n', str(response)
-
 
 def to_file(title, request, response):
 
@@ -25,13 +33,15 @@ def to_file(title, request, response):
 FILE = to_file
 STDOUT = to_stdout
 
-def demo_request(title, method, body, headers=None, target=STDOUT):
-	request, response = protel_request(method, HOST, PORT, body)	
+def demo_request(title, method, body='', headers=None, outlet='1', transaction=None, host=None, port=None, target=STDOUT):
+
+	request, response = protel_request(method, host, port, body, headers, outlet, transaction)	
 	target(title, request, response)
 
-def demo_requests(target):
 
-	req = partial(demo_request, target=target)
+def demo_requests(target, host, port):
+
+	req = partial(demo_request, target=target, host=host, port=port)
 
 	#demo_requests(to_stdout)
 	req('ValidateReservation with invalid ResNo',
@@ -47,7 +57,12 @@ def demo_requests(target):
 	 	"<Body><Room>1408</Room></Body>")
 
 
-if __name__ == "__main__":		
+if __name__ == "__main__":	
+	args = parse_args()	
 
-	demo_requests(FILE)
+	if args.target == 'file':
+		target = to_file
+	else:
+		target = to_stdout
 
+	demo_requests(target, args.host, args.port)
