@@ -1,4 +1,5 @@
 from client import protel_request
+from functools import partial
 
 HOST = '217.6.121.163'
 PORT = 5015              # The same port as used by the server
@@ -15,7 +16,7 @@ def to_stdout(title, request, response):
 def to_file(title, request, response):
 
 	def write(title, kind, data):
-		with file('{}-{}'.format(title, kind), 'w+') as f:
+		with file('examples/{}-{}'.format(title, kind), 'w+') as f:
 			f.write(data)
 
 	write(title, 'request', request)
@@ -35,22 +36,23 @@ def demo_request(title, method, body, headers=None, target=STDOUT):
 
 def demo_requests(target):
 
-	# ok
-	protel_request('ValidateReservation', HOST, PORT, "<Body><ResNo>5</ResNo></Body>")
+	req = partial(demo_request, target=target)
 
-	headline("FindReservationByName")
-	protel_request('FindReservationByName', HOST, PORT, "<Body><Search>Protel</Search></Body>")
+	#demo_requests(to_stdout)
+	req('ValidateReservation with invalid ResNo',
+		 'ValidateReservation', 
+		 "<Body><ResNo>5</ResNo></Body>")
 
-	headline("FindReservationByRoom")
-	protel_request('FindReservationByRoom', HOST, PORT, "<Body><Room>1408</Room></Body>")
+	req('FindReservationByName - name does not exist', 
+		'FindReservationByName', 
+		"<Body><Search>Protel</Search></Body>")
 
-
-
+	req('FindReservationByRoom - room does not exist',
+		'FindReservationByRoom',
+	 	"<Body><Room>1408</Room></Body>")
 
 
 if __name__ == "__main__":		
-	target = FILE
-	#demo_requests(to_stdout)
-	demo_request('ValidateReservation with invalid ResNo',
-				 'ValidateReservation', "<Body><ResNo>5</ResNo></Body>", target=target)
+
+	demo_requests(STDOUT)
 
