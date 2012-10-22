@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Success: 0
+Transaction: 857103672
+Outlet: 1
+Content-length: 1075
+
+<Body><Reservation><ResNo>515</ResNo><Blocked>0</Blocked><Room>101</Room><MPEHotel>1</MPEHotel><Profile>251</Profile><Salutation>Mr.</Salutation><FirstName>Hazim M.</FirstName><LastName>Shanyour</LastName><Arrival>201207111529</Arrival><Departure>201208111400</Departure><RoomRate>ÜF</RoomRate><Balance>0.00</Balance><CreditLimit>0.00</CreditLimit></Reservation><Reservation><ResNo>524</ResNo><Blocked>0</Blocked><Room>101</Room><MPEHotel>1</MPEHotel><Profile>252</Profile><Salutation>Mr.</Salutation><FirstName>Ammar A.</FirstName><LastName>Shunnar</LastName><Arrival>201207111530</Arrival><Departure>201208111400</Departure><RoomRate>ÜF</RoomRate><Balance>0.00</Balance><CreditLimit>0.00</CreditLimit></Reservation><Reservation><ResNo>513</ResNo><Blocked>0</Blocked><Room>105</Room><MPEHotel>1</MPEHotel><Profile>244</Profile><Salutation>Mr.</Salutation><FirstName>Samo</FirstName><LastName>Lu?trik</LastName><Arrival>201207111741</Arrival><Departure>201208111400</Departure><RoomRate>ÜF</RoomRate><Balance>0.00</Balance><CreditLimit>0.00</CreditLimit></Reservation></Body>

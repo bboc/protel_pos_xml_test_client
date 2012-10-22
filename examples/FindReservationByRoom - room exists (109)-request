@@ -1,0 +1,6 @@
+POST FindReservationByRoom HTTP/1.1
+Transaction: 837218108
+Outlet: 1
+Content-length: 29
+
+<Body><Room>109</Room></Body>

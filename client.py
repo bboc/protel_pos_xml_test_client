@@ -45,12 +45,36 @@ class ProtelClient(object):
 		return "\r\n".join(hdr)
 
 	def send(self):
+
+
+		def get_response(s):
+			SIZE = 1024
+			BODY_SEPARATOR = '\r\n\r\n'
+			response = s.recv(SIZE)
+			raw_header, sep, body = response.partition(BODY_SEPARATOR)
+			if not body:
+				raise Exception('malformed response {}'.format(repr(response)))
+			
+			header = split_header(raw_header)
+			content_length = header['Content-length']
+			while len(body) < int(content_length):
+				body +=	s.recv(SIZE)
+			return BODY_SEPARATOR.join((raw_header, body))
+
+		def split_header(raw_header):
+			"""Split a header into a dictionary"""
+			lines = raw_header.split('\r\n')[1:]
+			header = dict()
+			for line in lines:
+				key, sep, value = line.partition(':')
+				header[key] = value.strip()
+			return header
+
 		with SocketManager(self._host, self._port) as s:
 			result = s.sendall(self.request)
 			if result == None:
 				# send successful
-				response = s.recv(1024)
-				return response
+				return get_response(s)
 			else:
 				print "### error while sending ###"
 

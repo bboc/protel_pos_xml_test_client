@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Success: 0
+Transaction: 860310806
+Outlet: 1
+Content-length: 369
+
+<Body><Reservation><ResNo>515</ResNo><Blocked>0</Blocked><Room>101</Room><MPEHotel>1</MPEHotel><Profile>251</Profile><Salutation>Mr.</Salutation><FirstName>Hazim M.</FirstName><LastName>Shanyour</LastName><Arrival>201207111529</Arrival><Departure>201208111400</Departure><RoomRate>ÜF</RoomRate><Balance>0.00</Balance><CreditLimit>0.00</CreditLimit></Reservation></Body>

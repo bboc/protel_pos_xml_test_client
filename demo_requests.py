@@ -28,7 +28,7 @@ def to_file(title, request, response):
 		with file('examples/{}-{}'.format(title, kind), 'w+') as f:
 			f.write(data)
 	write(title, 'request', request)
-	write(title, 'response', response)	
+	write(title, 'response', response)
 
 FILE = to_file
 STDOUT = to_stdout
@@ -43,18 +43,42 @@ def demo_requests(target, host, port):
 
 	req = partial(demo_request, target=target, host=host, port=port)
 
-	#demo_requests(to_stdout)
 	req('ValidateReservation with invalid ResNo',
 		 'ValidateReservation', 
 		 "<Body><ResNo>5</ResNo></Body>")
+
+
+	req('ValidateReservation with valid ResNo',
+		 'ValidateReservation', 
+		 "<Body><ResNo>533</ResNo></Body>")
+
 
 	req('FindReservationByName - name does not exist', 
 		'FindReservationByName', 
 		"<Body><Search>Protel</Search></Body>")
 
+	req('FindReservationByName - name exists', 
+		'FindReservationByName', 
+		"<Body><Search>Bockelbrink</Search></Body>")
+
 	req('FindReservationByRoom - room does not exist',
 		'FindReservationByRoom',
 	 	"<Body><Room>1408</Room></Body>")
+
+
+	req('FindReservationByRoom - room exists (108)',
+		'FindReservationByRoom',
+	 	"<Body><Room>108</Room></Body>")
+
+	req('FindReservationByRoom - room exists (109)',
+		'FindReservationByRoom',
+	 	"<Body><Room>109</Room></Body>")
+
+
+	for i in range(97, 97+26):
+		req('FindReservationByName - name exists ({})'.format(chr(i)), 
+			'FindReservationByName', 
+			"<Body><Search>{}</Search></Body>".format(chr(i)))
 
 
 if __name__ == "__main__":	
