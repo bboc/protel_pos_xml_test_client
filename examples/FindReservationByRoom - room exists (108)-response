@@ -1,7 +1,7 @@
 HTTP/1.1 200 OK
 Success: 0
-Transaction: 244434489
+Transaction: 123780564
 Outlet: 1
 Content-length: 728
 
-<Body><Reservation><ResNo>533</ResNo><Blocked>0</Blocked><Room>108</Room><MPEHotel>1</MPEHotel><Profile>257</Profile><Salutation>Herr</Salutation><FirstName>Bastian</FirstName><LastName>Schmidtke</LastName><Arrival>201210191449</Arrival><Departure>201211191400</Departure><RoomRate>ÜF</RoomRate><Balance>1645.00</Balance><CreditLimit>0.00</CreditLimit></Reservation><Reservation><ResNo>534</ResNo><Blocked>0</Blocked><Room>108</Room><MPEHotel>1</MPEHotel><Profile>258</Profile><Salutation>Herr</Salutation><FirstName>Patrick</FirstName><LastName>Brienen</LastName><Arrival>201210191450</Arrival><Departure>201211191400</Departure><RoomRate>ÜF</RoomRate><Balance>0.00</Balance><CreditLimit>0.00</CreditLimit></Reservation></Body>
+<Body><Reservation><ResNo>533</ResNo><Blocked>0</Blocked><Room>108</Room><MPEHotel>1</MPEHotel><Profile>257</Profile><Salutation>Herr</Salutation><FirstName>Bastian</FirstName><LastName>Schmidtke</LastName><Arrival>201210191449</Arrival><Departure>201211191400</Departure><RoomRate>ÜF</RoomRate><Balance>1965.50</Balance><CreditLimit>0.00</CreditLimit></Reservation><Reservation><ResNo>534</ResNo><Blocked>0</Blocked><Room>108</Room><MPEHotel>1</MPEHotel><Profile>258</Profile><Salutation>Herr</Salutation><FirstName>Patrick</FirstName><LastName>Brienen</LastName><Arrival>201210191450</Arrival><Departure>201211191400</Departure><RoomRate>ÜF</RoomRate><Balance>0.00</Balance><CreditLimit>0.00</CreditLimit></Reservation></Body>

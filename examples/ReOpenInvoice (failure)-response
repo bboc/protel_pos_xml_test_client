@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Success: 1017
+Transaction: 123147117
+Outlet: 1
+Reservation: 420
+Content-length: 119
+
+<Body><Errortext>Payment item with invalid(ated) reservation number ('420') provided in subtag ResNo</Errortext></Body>

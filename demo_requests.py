@@ -66,6 +66,48 @@ def demo_requests(target, host, port):
             </Item>
             </Body>"""))
 
+    req('ReOpenInvoice (simple)',
+        'ReOpenInvoice', 
+         textwrap.dedent("""<Body>
+            <Creation>20121020164510</Creation>
+            <Outlet>1</Outlet>
+            <User>1</User>
+            <Invoice>124</Invoice>
+            <Item>
+                <Type>Revenue</Type>
+                <Productgroup>1</Productgroup>
+                <TaxClassification>2</TaxClassification>
+                <TotalAmount>2.50</TotalAmount>
+            </Item>
+            <Item>
+                <Type>Payment</Type>
+                <TotalAmount>2.50</TotalAmount>
+                <ResNo>533</ResNo>
+            </Item>
+            </Body>"""))
+
+    req('ReOpenInvoice (failure)',
+        'ReOpenInvoice', 
+         textwrap.dedent("""<Body>
+            <Creation>20121020164510</Creation>
+            <Outlet>1</Outlet>
+            <User>1</User>
+            <Invoice>999</Invoice>
+            <Item>
+                <Type>Revenue</Type>
+                <Productgroup>11</Productgroup>
+                <TaxClassification>22</TaxClassification>
+                <TotalAmount>99.98</TotalAmount>
+            </Item>
+            <Item>
+                <Type>Payment</Type>
+                <TotalAmount>99.99</TotalAmount>
+                <ResNo>420</ResNo>
+            </Item>
+            </Body>"""))
+
+
+
     req('CloseInvoice (complex with expenses and gratuity)',
          'CloseInvoice', 
          textwrap.dedent("""<Body>

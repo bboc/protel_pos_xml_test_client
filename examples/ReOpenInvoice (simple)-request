@@ -1,5 +1,5 @@
-POST CloseInvoice HTTP/1.1
-Transaction: 122926831
+POST ReOpenInvoice HTTP/1.1
+Transaction: 123022212
 Outlet: 1
 Content-length: 554
 

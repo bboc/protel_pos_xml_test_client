@@ -1,7 +1,7 @@
 HTTP/1.1 200 OK
 Success: 0
-Transaction: 239762785
+Transaction: 123395950
 Outlet: 1
 Content-length: 373
 
-<Body><Reservation><ResNo>533</ResNo><Blocked>0</Blocked><Room>108</Room><MPEHotel>1</MPEHotel><Profile>257</Profile><Salutation>Herr</Salutation><FirstName>Bastian</FirstName><LastName>Schmidtke</LastName><Arrival>201210191449</Arrival><Departure>201211191400</Departure><RoomRate>ÜF</RoomRate><Balance>1645.00</Balance><CreditLimit>0.00</CreditLimit></Reservation></Body>
+<Body><Reservation><ResNo>533</ResNo><Blocked>0</Blocked><Room>108</Room><MPEHotel>1</MPEHotel><Profile>257</Profile><Salutation>Herr</Salutation><FirstName>Bastian</FirstName><LastName>Schmidtke</LastName><Arrival>201210191449</Arrival><Departure>201211191400</Departure><RoomRate>ÜF</RoomRate><Balance>1953.00</Balance><CreditLimit>0.00</CreditLimit></Reservation></Body>
