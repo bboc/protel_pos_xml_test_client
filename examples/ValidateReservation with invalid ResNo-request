@@ -1,5 +1,5 @@
 POST ValidateReservation HTTP/1.1
-Transaction: 923614611
+Transaction: 238666680
 Outlet: 1
 Content-length: 29
 
