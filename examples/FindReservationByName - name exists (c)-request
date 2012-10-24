@@ -1,6 +1,0 @@
-POST FindReservationByName HTTP/1.1
-Transaction: 282428224
-Outlet: 1
-Content-length: 31
-
-<Body><Search>c</Search></Body>

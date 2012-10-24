@@ -138,10 +138,10 @@ def demo_requests(target, host, port):
         "<Body><Room>109</Room></Body>")
 
 
-    for i in range(97, 97+26):
-        req('FindReservationByName - name exists ({})'.format(chr(i)), 
-            'FindReservationByName', 
-            "<Body><Search>{}</Search></Body>".format(chr(i)))
+    # for i in range(97, 97+26):
+    #     req('FindReservationByName - name exists ({})'.format(chr(i)), 
+    #         'FindReservationByName', 
+    #         "<Body><Search>{}</Search></Body>".format(chr(i)))
 
 
 if __name__ == "__main__":  
