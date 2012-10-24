@@ -1,6 +1,9 @@
+# -*- coding: iso-8859-1 -*-
+
 import argparse
 from functools import partial
 import textwrap
+
 from client import protel_request
 
 
