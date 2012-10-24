@@ -1,7 +1,7 @@
 HTTP/1.1 200 OK
 Success: 0
-Transaction: 840938261
+Transaction: 282535136
 Outlet: 1
-Content-length: 730
+Content-length: 732
 
-<Body><Reservation><ResNo>533</ResNo><Blocked>0</Blocked><Room>108</Room><MPEHotel>1</MPEHotel><Profile>257</Profile><Salutation>Herr</Salutation><FirstName>Bastian</FirstName><LastName>Schmidtke</LastName><Arrival>201210191449</Arrival><Departure>201211191400</Departure><RoomRate>ÜF</RoomRate><Balance>0.00</Balance><CreditLimit>0.00</CreditLimit></Reservation><Reservation><ResNo>532</ResNo><Blocked>0</Blocked><Room>109</Room><MPEHotel>1</MPEHotel><Profile>256</Profile><Salutation>Herr</Salutation><FirstName>Bernhard</FirstName><LastName>Bockelbrink</LastName><Arrival>201210191446</Arrival><Departure>201211191400</Departure><RoomRate>ÜF</RoomRate><Balance>0.00</Balance><CreditLimit>0.00</CreditLimit></Reservation></Body>
+<Body><Reservation><ResNo>533</ResNo><Blocked>0</Blocked><Room>108</Room><MPEHotel>1</MPEHotel><Profile>257</Profile><Salutation>Herr</Salutation><FirstName>Bastian</FirstName><LastName>Schmidtke</LastName><Arrival>201210191449</Arrival><Departure>201211191400</Departure><RoomRate>ÜF</RoomRate><Balance>999.00</Balance><CreditLimit>0.00</CreditLimit></Reservation><Reservation><ResNo>532</ResNo><Blocked>0</Blocked><Room>109</Room><MPEHotel>1</MPEHotel><Profile>256</Profile><Salutation>Herr</Salutation><FirstName>Bernhard</FirstName><LastName>Bockelbrink</LastName><Arrival>201210191446</Arrival><Departure>201211191400</Departure><RoomRate>ÜF</RoomRate><Balance>0.00</Balance><CreditLimit>0.00</CreditLimit></Reservation></Body>

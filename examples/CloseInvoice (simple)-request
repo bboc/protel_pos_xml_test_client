@@ -1,0 +1,22 @@
+POST CloseInvoice HTTP/1.1
+Transaction: 280490317
+Outlet: 1
+Content-length: 554
+
+<Body>
+            <Creation>20121020164510</Creation>
+            <Outlet>1</Outlet>
+            <User>1</User>
+            <Invoice>124</Invoice>
+            <Item>
+                <Type>Revenue</Type>
+                <Productgroup>1</Productgroup>
+                <TaxClassification>2</TaxClassification>
+                <TotalAmount>2.50</TotalAmount>
+            </Item>
+            <Item>
+                <Type>Payment</Type>
+                <TotalAmount>2.50</TotalAmount>
+                <ResNo>533</ResNo>
+            </Item>
+            </Body>
